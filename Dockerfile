@@ -1,6 +1,7 @@
 FROM golang:1.15.7 as builder
 RUN mkdir -p /opt/centrifugo
 ADD . /opt/centrifugo
+WORKDIR /opt/centrifugo
 RUN make build
 
 FROM alpine:3.10
