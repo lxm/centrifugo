@@ -83,3 +83,6 @@ dockers:
     - "centrifugo/centrifugo:v{{ .Major }}"
     - "centrifugo/centrifugo:v{{ .Major }}.{{ .Minor }}"
     - "centrifugo/centrifugo:latest"
+    use_buildx: true
+    build_flag_templates:
+    - "--platform=linux/arm64,linux/amd64"
